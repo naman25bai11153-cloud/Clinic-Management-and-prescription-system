@@ -1,10 +1,7 @@
 # 🏥 Clinic Management & Prescription System
 
-[![Java](https://img.shields.io/badge/Language-Java-orange.svg)](https://www.oracle.com/java/)
-[![License](https://img.shields.io/badge/License-Academic-blue.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Complete-success.svg)]()
 
-A robust, terminal-based **Clinic Management System** built from scratch using Core Java. Designed following strict Object-Oriented Programming (OOP) principles, this application provides an efficient in-memory solution for managing patient registries, doctor rosters, appointment scheduling with collision detection, and medical prescriptions without relying on external databases or complex GUI frameworks.
+A robust, terminal-based **Clinic Management System** built  using Core Java. Designed following strict Object-Oriented Programming (OOP) principles, this application provides an efficient in-memory solution for managing patient registries, doctor rosters, appointment scheduling with collision detection, and medical prescriptions without relying on external databases or complex GUI frameworks.
 
 ---
 
