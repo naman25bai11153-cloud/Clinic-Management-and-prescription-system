@@ -23,16 +23,25 @@ public class Main {
         scan.nextLine();
         System.out.print("Enter Phone: ");
         String ph = scan.nextLine();
-
+        
+        // checks whether the phone number is valid.
+        if (ph.length() < 10 || ph.length() > 12) {
+            System.out.println("Invalid phone number");
+            return;
+        }
+        
+        //makes new patient object
         Patient p = new Patient(id, name, a, ph);
         patient.add(p);
         System.out.println("patient added successfully");
     }
-
+    
+    // adding a new doctor to the system
     public static void add_Doctor() {
         System.out.print("Enter Doctor ID: ");
         String id = scan.nextLine();
-
+        
+        //checks whether doctor with given id already exists
         for (Doctor d : dl) {
             if (d.getId().equals(id)) {
                 System.out.println("Doctor already exists with this ID. please add another ID");
