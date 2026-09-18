@@ -7,6 +7,8 @@ public class Main {
     static ArrayList<Appointment> apptList = new ArrayList<>();
 
     static Scanner scan = new Scanner(System.in);
+    
+    //add a new patient to the system.
     public static void add_Patient() {
         System.out.print("enter patient ID: ");
         String id = scan.nextLine();
@@ -23,24 +25,24 @@ public class Main {
         scan.nextLine();
         System.out.print("Enter Phone: ");
         String ph = scan.nextLine();
-        
+
         // checks whether the phone number is valid.
         if (ph.length() < 10 || ph.length() > 12) {
             System.out.println("Invalid phone number");
             return;
         }
-        
+
         //makes new patient object
         Patient p = new Patient(id, name, a, ph);
         patient.add(p);
         System.out.println("patient added successfully");
     }
-    
+
     // adding a new doctor to the system
     public static void add_Doctor() {
         System.out.print("Enter Doctor ID: ");
         String id = scan.nextLine();
-        
+
         //checks whether doctor with given id already exists
         for (Doctor d : dl) {
             if (d.getId().equals(id)) {
@@ -90,7 +92,7 @@ public class Main {
         System.out.print("Enter Doctor ID: ");
         String d_Id = scan.nextLine();
 
-        // 2. Verify whether doctor exists
+        // 2. Verify whether doctor already exists
         boolean doc_found = false;
         for (Doctor d : dl) {
             if (d.getId().equals(d_Id)) {
@@ -108,7 +110,7 @@ public class Main {
         String time = scan.nextLine();
 
 
-        // 3. to Verify if the doctor isn't already busy at this time
+        // 3. to Verify if the doctor's slot is already booked
         for (Appointment a : apptList) {
             if (a.getDoctorId().equals(d_Id) &&
                     a.getTime().equals(time) &&
@@ -128,7 +130,7 @@ public class Main {
         System.out.print("Enter appointment ID to complete: ");
         String id = scan.nextLine();
 
-        // find the appointment in the list
+        // find if the appointment is already present in the list
         Appointment found = null;
         for (int i = 0; i < apptList.size(); i++) {
             if (apptList.get(i).getAptId().equals(id)) {
@@ -146,7 +148,7 @@ public class Main {
         String med = scan.nextLine();
 
         System.out.print("Enter Dosage: ");
-        String dose = scan.nextLine();
+        int dose = scan.nextInt();
 
         found.givePrescription(med, dose);
         System.out.println("Prescription added and appointment completed.");
