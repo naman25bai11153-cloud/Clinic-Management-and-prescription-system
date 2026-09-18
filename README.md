@@ -33,3 +33,4 @@ Assuming you have no prior context or setup for this project, follow these instr
 2. **Compile the Java files** by executing the following command:
    ```bash
    javac *.java
+3. Run the code using java main
