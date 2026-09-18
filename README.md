@@ -15,7 +15,6 @@ A robust, terminal-based **Clinic Management System** built from scratch using C
 - [⚙️ Prerequisites & System Requirements](#️-prerequisites--system-requirements)
 - [🚀 Setup & Execution Instructions](#-setup--execution-instructions)
 - [💻 Usage Workflow Example](#-usage-workflow-example)
-- [👤 Author & Academic Context](#-author--academic-context)
 
 ---
 
