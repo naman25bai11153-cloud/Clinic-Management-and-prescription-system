@@ -7,7 +7,7 @@ public class Appointment {
 
     // prescription details
     private String medicine = "";
-    private String dosage = "";
+    private int dosage;
 
     public Appointment(String aptId, String patientId, String doctorId, String time) {
         this.aptId = aptId;
@@ -28,7 +28,7 @@ public class Appointment {
     }
 
     // adds medicine and marks appointment as done
-    public void givePrescription(String med, String dose) {
+    public void givePrescription(String med, int dose) {
         this.medicine = med;
         this.dosage = dose;
         this.status = "Completed";
