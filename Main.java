@@ -7,7 +7,7 @@ public class Main {
     static ArrayList<Appointment> apptList = new ArrayList<>();
 
     static Scanner scan = new Scanner(System.in);
-    
+
     //add a new patient to the system.
     public static void add_Patient() {
         System.out.print("enter patient ID: ");
@@ -65,6 +65,8 @@ public class Main {
     public static void book_app() {
         System.out.print("Enter Application ID: ");
         String app_Id = scan.nextLine();
+        
+        //checks if the appointment slot has already been booked aqt this time
         for (Appointment a : apptList) {
             if (a.getAptId().equals(app_Id)) {
                 System.out.println("Error: Appointment ID already taken!");
@@ -149,7 +151,8 @@ public class Main {
 
         System.out.print("Enter Dosage: ");
         int dose = scan.nextInt();
-
+        
+        
         found.givePrescription(med, dose);
         System.out.println("Prescription added and appointment completed.");
     }
@@ -157,7 +160,8 @@ public class Main {
     public static void cancel() {
         System.out.print("Enter appointment ID: ");
         String id = scan.nextLine();
-
+        
+        //cancels appointment if it exists by returning nothing before it prints out next line
         for (Appointment a : apptList) {
             if (a.getAptId().equals(id)) {
                 a.setStatus("Cancelled");
@@ -175,7 +179,8 @@ public class Main {
 
         System.out.println("\n--- History for Patient " + pat_Id + " ---");
         boolean f = false;
-
+        
+        //checks for records
         for (Appointment a : apptList) {
             if (a.getPatientId().equals(pat_Id)) {
                 System.out.println(a);
